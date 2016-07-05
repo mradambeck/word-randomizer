@@ -3,6 +3,6 @@ mongoose.connect( process.env.MONGODB_URI ||
                   process.env.MONGOHQ_URL ||
                   "mongodb://localhost/portfolio");
 
-var Project = require('./project');
+var Text = require('./text');
 
-module.exports.Project = Project;
+module.exports.Text = Text;
