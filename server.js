@@ -41,13 +41,13 @@ app.get('/', function homepage (req, res) {
  */
 
 app.get('/api', controllers.api.index);
-app.post('/api/texts', controllers.projects.create);
+app.post('/api/texts', controllers.texts.create);
 
-// app.get('/api/projects', controllers.projects.index);
-// app.get('/api/projects/:projectId', controllers.projects.show);
+// app.get('/api/texts', controllers.texts.index);
+// app.get('/api/texts/:textId', controllers.texts.show);
 
-// app.delete('/api/projects/:projectId', controllers.projects.destroy);
-// app.put('/api/projects/:projectId', controllers.projects.update);
+// app.delete('/api/texts/:textId', controllers.texts.destroy);
+// app.put('/api/texts/:textId', controllers.texts.update);
 
 app.get('/templates/:name', controllers.api.templates);
 

@@ -1,6 +1,6 @@
 # Word Randomizer
 
-Inspired by the [cut-up technique](https://en.wikipedia.org/wiki/Cut-up_technique), a friend of mine needed a word randomizer for writing lyrics. I figured it'd be a quick project and a fun way to save him some time.
+Inspired by the [cut-up technique](https://en.wikipedia.org/wiki/Cut-up_technique), a friend of mine needed a word randomizer for writing lyrics. I figured it'd be a quick text and a fun way to save him some time.
 
 ### Prerequisites
 
