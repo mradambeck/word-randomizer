@@ -5,7 +5,7 @@
  */
 
 angular
- .module('word-randomizer', ['ui.bootstrap'])
+ .module('word-randomizer', [])
  .controller('TextsIndexController', TextsIndexController)
  .config(['$compileProvider',
     function ($compileProvider) {

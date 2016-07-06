@@ -8,7 +8,6 @@
 
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/styles/bootstrap-theme.min.css">
   <link rel="stylesheet" href="/styles/styles.css">
 
   <!-- VENDOR SCRIPTS -->
@@ -23,9 +22,14 @@
 
 </head>
 <body>
-  <div class="container">
-    <h1>Cut-Ups</h1>
-  </div>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">CUT UPS</a>
+      </div>
+
+    </div>
+  </nav>
   <div class="container">
     <div class="row" ng-controller="TextsIndexController as textsIndexCtrl">
 
@@ -37,8 +41,8 @@
           <form>
             <div class="form-group">
               <form>
-                <textarea class="form-control" rows="5" id="new-text" placeholder="Enter the text you'd like to randomize" ng-model="textsIndexCtrl.newText.text"></textarea>
-                <button id="submit" class="btn btn-primary" ng-click="textsIndexCtrl.shuffleText()">Submit</button>
+                <textarea class="form-control" rows="10" id="new-text" placeholder="Enter the text you'd like to randomize" ng-model="textsIndexCtrl.newText.text"></textarea>
+                <button id="submit" class="btn btn-primary" ng-click="textsIndexCtrl.shuffleText()">Randomize it!</button>
               </form>
             </div>
           </form>
@@ -51,7 +55,7 @@
           <h3>Randomized version</h3>
         </div>
         <div class="row">
-          <textarea class="form-control" rows="5" id="randomized-text" ng-model="textsIndexCtrl.randomizedText.text"></textarea>
+          <textarea class="form-control" rows="10" id="randomized-text" ng-model="textsIndexCtrl.randomizedText.text" placeholder="The randomized text will appear here"></textarea>
         </div>
       </div>
 

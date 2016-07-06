@@ -1,4 +1,16 @@
-div {
-  border: 1px dotted grey; }
+.btn {
+  margin-top: 13px; }
+
+@media (min-width: 768px) {
+  #form-row {
+    padding-right: 40px !important; }
+
+  #response-row {
+    padding-left: 40px !important; } }
+@media (max-width: 768px) {
+  #form-row,
+  #response-row {
+    margin-left: 20px !important;
+    margin-right: 20px !important; } }
 
 /*# sourceMappingURL=styles.css.map */
