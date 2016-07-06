@@ -6,7 +6,12 @@
 
 angular
  .module('word-randomizer', ['ui.bootstrap'])
- .controller('TextsIndexController', TextsIndexController);
+ .controller('TextsIndexController', TextsIndexController)
+ .config(['$compileProvider',
+    function ($compileProvider) {
+      $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|tel|file|blob):/);
+    }
+  ]);
 
 TextsIndexController.$inject = ['$http'];
 
@@ -24,6 +29,7 @@ function TextsIndexController ( $http ) {
   };
 
 
+
   vm.shuffleText = function() {
     console.log(vm.newText);
     $http({
@@ -31,11 +37,13 @@ function TextsIndexController ( $http ) {
       url: ('api/texts/'),
       data: vm.newText
     }).then(function showOneText(response) {
-      console.log(response);
-      vm.randomizedText.text = response.data;
+      newText = response.data;
+      vm.randomizedText.text = newText;
+
     }, function error(response) {
       console.error(response);
     });
   };
+
 
 }
