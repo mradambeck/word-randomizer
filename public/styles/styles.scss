@@ -10,6 +10,10 @@ $mobile-breakpoint: 768px;
   margin-top: 13px;
 }
 
+li a {
+  padding: 15px 10px 15px 10px!important;
+}
+
 @media (min-width: $mobile-breakpoint) {
   #form-row {
     padding-right: $mid-spacing!important;

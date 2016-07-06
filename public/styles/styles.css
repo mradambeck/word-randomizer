@@ -1,6 +1,9 @@
 .btn {
   margin-top: 13px; }
 
+li a {
+  padding: 15px 10px 15px 10px !important; }
+
 @media (min-width: 768px) {
   #form-row {
     padding-right: 40px !important; }
