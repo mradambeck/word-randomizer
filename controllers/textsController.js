@@ -2,7 +2,7 @@
  * DATABASE *
  ************/
 
-var db = require('../models');
+
 
 function create(req, res) {
   console.log('req: ', req.body);
