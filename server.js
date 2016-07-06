@@ -43,12 +43,6 @@ app.get('/', function homepage (req, res) {
 app.get('/api', controllers.api.index);
 app.post('/api/texts', controllers.texts.create);
 
-// app.get('/api/texts', controllers.texts.index);
-// app.get('/api/texts/:textId', controllers.texts.show);
-
-// app.delete('/api/texts/:textId', controllers.texts.destroy);
-// app.put('/api/texts/:textId', controllers.texts.update);
-
 app.get('/templates/:name', controllers.api.templates);
 
 // ALL OTHER ROUTES (ANGULAR HANDLES)
