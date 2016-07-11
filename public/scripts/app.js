@@ -21,7 +21,8 @@ function TextsIndexController ( $http ) {
 
   vm.newText = {};
   vm.newText = {
-    text: ""
+    text: "",
+    lineBreaks: true
   };
   vm.randomizedText = {};
   vm.randomizedText = {
