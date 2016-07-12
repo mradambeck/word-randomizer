@@ -2,14 +2,12 @@
  * DATABASE *
  ************/
 
-
-
 function create(req, res) {
-  console.log('req: ', req.body);
+  // console.log('req: ', req.body);
 
   var text = req.body.text;
-  var lineBreaks = req.body.lineBreaks;
-  lineBreaks = (lineBreaks === 'true'); // convert to Boolean
+  var wantsLineBreaks = req.body.lineBreaks;
+  wantsLineBreaks = (wantsLineBreaks === 'true'); // converts String to Boolean
 
   var countWordsPerLine = function(string){
     var wordCount = [];
@@ -40,12 +38,14 @@ function create(req, res) {
   };
   var randomizedText = randomizeString(text);
 
-
-  if (lineBreaks) {
+  // If they want to maintain linebreaks, do it, otherwise just shoot it back
+  if (wantsLineBreaks) {
     var strippedText = randomizedText.replace(/\n/g,' '); //remove any places where there is a lineBreak in the provided text
-    var lineBreakArray = countWordsPerLine(text);
+    var lineBreakArray = countWordsPerLine(text); //counts how many words should be in each line
     var randomizedTextArray = strippedText.split(' ');
     var linesToReturn = [];
+
+    // for each line, go through and add the appropriate word amount to each one
     for (var line = 0; line < lineBreakArray.length; line++) {
       var thisLine = randomizedTextArray.splice(0,lineBreakArray[line]);
       thisLine = thisLine.join(' ');
@@ -55,7 +55,6 @@ function create(req, res) {
     res.json(linesToReturn);
 
   } else {
-
     res.json(randomizedText);
   }
 

@@ -22,7 +22,7 @@ function TextsIndexController ( $http ) {
   vm.newText = {};
   vm.newText = {
     text: "",
-    lineBreaks: true
+    lineBreaks: 'true'
   };
   vm.randomizedText = {};
   vm.randomizedText = {
@@ -32,7 +32,7 @@ function TextsIndexController ( $http ) {
 
 
   vm.shuffleText = function() {
-    console.log(vm.newText);
+    // console.log(vm.newText);
     $http({
       method: 'POST',
       url: ('api/texts/'),
