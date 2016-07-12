@@ -48,6 +48,19 @@
             <div class="form-group">
               <form>
                 <textarea class="form-control" rows="10" id="new-text" placeholder="Enter the text you'd like to randomize" ng-model="textsIndexCtrl.newText.text"></textarea>
+              <div class="radio" >
+
+                <label>
+                  <input type="radio" name="lineBreaks" id="lineBreaks1" value=true ng-model="textsIndexCtrl.newText.lineBreaks" checked="checked">
+                  Maintain amount of words per line
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="lineBreaks" id="lineBreaks2" value=false ng-model="textsIndexCtrl.newText.lineBreaks">
+                  Have lines break at words that have breaks afterwards
+                </label>
+              </div>
                 <button id="submit" class="btn btn-primary" ng-click="textsIndexCtrl.shuffleText()">Cut it up!</button>
               </form>
             </div>
