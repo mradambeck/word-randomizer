@@ -14,4 +14,6 @@ Inspired by the [cut-up technique](https://en.wikipedia.org/wiki/Cut-up_techniqu
 
 2. Run `bower install` to install front-end dependencies.
 
-3. Run `sass --watch public/styles/styles.scss:public/styles/styles.css`
+3. Run `sass --watch public/styles/styles.scss:public/styles/styles.css` to compile SCSS into CSS.
+
+4. Run `nodemon` to serve the site.
